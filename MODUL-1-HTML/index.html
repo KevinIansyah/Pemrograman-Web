@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .container {
+      width: 800px;
+      margin: 50px auto;
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+      grid-template-columns: 1.5fr 0.5fr;
+      background-color: yellow;
+      padding: 20px;
+    }
+
+    header {
+      grid-area: header;
+      border: 1px solid black;
+    }
+
+    main {
+      grid-area: main;
+      border: 1px solid black;
+    }
+
+    aside {
+      grid-area: aside;
+      border: 1px solid black;
+    }
+
+    footer {
+      grid-area: footer;
+      border: 1px solid black;
+    }
+
+    .text-align-center {
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <header>
+        <h2>Selamat Datang Di Web kami</h2>
+      </header>
+
+      <aside>
+        <ul>
+          <li>Home</li>
+          <li>Profil</li>
+          <li>Hubungi Kami</li>
+        </ul>
+      </aside>
+
+      <main>
+        <h3>Teknik Publish Website</h3>
+        <p>
+          Publish web adalah cara untuk mempublikasikan web statis ataupun
+          dinamis yang sudah kita buat agar dapat dilihat oelh user melalui
+          browser. Agar dapat diakses oleh user untuk sebuah website. Kita
+          memerlukan Domain dan Hosting
+        </p>
+
+        <p class="text-align-center">
+          Bagi anda belum mengetahui apaitu Domain. Singkat cerita Domain adalah
+          sebuah nama alamat yang nantinya akan digunakan user untuk mengakses,
+          melihat atau menampilkan halaman web kita.
+          <b>Berikut cara mempublish website anda :</b>
+        </p>
+
+        <ol>
+          <li>Mendapatkan Domain</li>
+          <li>Setting name server di domain</li>
+          <li>Mendapatkan Hosting</li>
+          <li>Upload website</li>
+          <li>Instal database</li>
+          <li>Tes hasil</li>
+        </ol>
+      </main>
+
+      <footer>
+        <p>Dibuat oleh : Kevin Iansyah</p>
+      </footer>
+    </div>
+  </body>
+</html>
