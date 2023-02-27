@@ -1,0 +1,561 @@
+body {
+  font-family: "Kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  width: 100%;
+  background-color: #242222;
+  opacity: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 7%;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 9999;
+}
+
+nav .nav-logo img {
+  width: 140px;
+}
+
+nav .nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+nav .nav-menu a {
+  margin-left: 30px;
+  text-decoration: none;
+  font-family: "Kanit", sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
+  color: #f8f8fa;
+}
+
+nav .nav-menu a:hover {
+  font-size: 15px;
+  color: #8f8f9f;
+}
+
+.container {
+  padding: 100px 150px 100px 150px;
+}
+
+.jumbotron {
+  width: 100%;
+  background-image: url(../image/Jumbotron.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.jumbotron::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+  position: absolute;
+  bottom: 0;
+}
+
+.jumbotron .container {
+  display: grid;
+  grid-template-areas: "box-1 box-2";
+  grid-template-columns: 1fr 1fr;
+}
+
+.box-1 {
+  grid-area: box-1;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box-2 {
+  grid-area: box-2;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.box-1 h2 {
+  font-family: "Kanit", sans-serif;
+  color: #dda237;
+  font-size: 30px;
+}
+
+.box-1 h1 {
+  font-family: "Kanit", sans-serif;
+  color: #f8f8fa;
+  font-size: 58px;
+  margin-top: 20px;
+}
+
+.box-1 .h1-2 {
+  margin-top: 0;
+}
+
+.box-1 p {
+  font-family: "Roboto", sans-serif;
+  color: #f8f8fa;
+  font-size: 15px;
+  margin-top: 20px;
+  line-height: 20px;
+}
+
+.box-1 .sub-p {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.box-1 .box-bs {
+  display: flex;
+  justify-content: center;
+}
+
+.box-1 .box-bs .box-sosmed {
+  width: 180px;
+  background-color: #d9d9d9;
+  opacity: 30%;
+  border-radius: 20px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.box-sosmed a {
+  font-size: 30px;
+  color: #242222;
+  opacity: 80%;
+  margin-top: 4px;
+  padding: 3px;
+}
+
+.box-sosmed a:hover {
+  color: #000000;
+}
+
+/* Halaman 2 */
+
+.about-me {
+  background-color: #3c3b3b;
+}
+
+.about-me .container {
+  display: grid;
+  grid-template-areas: "box-3 box-4";
+  grid-template-columns: 0.5fr 0.5fr;
+}
+
+.box-3 {
+  grid-area: box-3;
+  display: flex;
+}
+
+.box-3 picture img {
+  width: 353px;
+}
+
+.box-4 {
+  grid-area: box-4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box-4 h2 {
+  font-family: "Kanit", sans-serif;
+  color: #dda237;
+  font-size: 30px;
+}
+
+.box-4 h1 {
+  font-family: "Kanit", sans-serif;
+  color: #f8f8fa;
+  font-size: 46px;
+}
+
+.box-4 p {
+  font-family: "Roboto", sans-serif;
+  color: #f8f8fa;
+  font-size: 15px;
+  margin-top: 10px;
+  line-height: 20px;
+}
+
+.box-4 .box-table {
+  font-family: "Kanit", sans-serif;
+  color: #f8f8fa;
+  font-weight: 100;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 20px;
+  /* background-color: #121211; */
+  border: 2px solid rgba(221, 162, 55, 0.8);
+}
+
+.box-4 .box-table td {
+  padding: 10px;
+}
+
+.box-4 .box-table td b {
+  font-weight: 400;
+}
+
+/* Halaman 3 */
+.hobby {
+  background-color: #242222;
+}
+
+.hobby h1 {
+  font-family: "Kanit", sans-serif;
+  color: #f8f8fa;
+  font-size: 46px;
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.hobby h1 span {
+  color: #dda237;
+}
+
+.hobby .box-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hobby .box-card .card {
+  width: 250px;
+  height: 265px;
+  background-color: #f8f8fa;
+  border-radius: 20px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hobby img {
+  width: 210px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.hobby figcaption {
+  font-family: "Kanit", sans-serif;
+  color: #242222;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Halaman 4 */
+.addres {
+  background-color: #3c3b3b;
+}
+
+.addres .container {
+  display: grid;
+  grid-template-areas: "box-5 box-6";
+  grid-template-columns: 1fr 1fr;
+}
+
+.box-5 {
+  grid-area: box-5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box-5 h1 {
+  font-family: "Kanit", sans-serif;
+  color: #dda237;
+  font-size: 46px;
+}
+
+.box-5 h1 span {
+  color: #f8f8fa;
+}
+
+.box-5 p {
+  font-family: "Roboto", sans-serif;
+  color: #f8f8fa;
+  font-size: 15px;
+  margin-top: 10px;
+  line-height: 20px;
+}
+
+.box-6 {
+  grid-area: box-6;
+  display: flex;
+  justify-content: end;
+}
+.box-6 .box-maps {
+  width: 500px;
+  height: 340px;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-6 picture img {
+  width: 430px;
+  border-radius: 20px;
+}
+
+.button {
+  background-color: #dda237;
+  width: 100px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.8);
+  border: none;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+/* Halaman 5 */
+.contact {
+  background-color: #f8f8fa;
+}
+.contact h1 {
+  font-family: "Kanit", sans-serif;
+  color: #242222;
+  font-size: 46px;
+  text-align: center;
+}
+
+.contact h1 span {
+  color: #dda237;
+}
+
+.box-bc {
+  display: flex;
+  justify-content: center;
+}
+
+.box-bc .box-contact {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.button-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  padding: 3px;
+  border-radius: 10px;
+  font-size: 30px;
+  color: #242222;
+  border: 2px solid rgba(36, 34, 34, 1);
+  /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5); */
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-contact p {
+  font-size: 10px;
+}
+
+.instagram:hover {
+  color: #f8f8fa;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+
+.facebook:hover {
+  color: #f8f8fa;
+  border: none;
+  background-image: linear-gradient(to right, #0165e1, #17a9fd);
+}
+
+.linkedin:hover {
+  color: #f8f8fa;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    #0077b5,
+    #000000,
+    #313335,
+    #86888a,
+    #caccce,
+    #00a0dc
+  );
+}
+
+.github:hover {
+  color: #f8f8fa;
+  border: none;
+  background-image: linear-gradient(to right, #2d333a, #000000);
+}
+
+/* Halaman 6 */
+.tools {
+  background-color: #242222;
+}
+
+.tools h1 {
+  font-family: "Kanit", sans-serif;
+  color: #f8f8fa;
+  font-size: 46px;
+  text-align: center;
+}
+
+.tools span {
+  color: #dda237;
+}
+
+.box-tl {
+  display: flex;
+  justify-content: center;
+}
+
+.box-tl .box-tools {
+  width: 200px;
+  height: 100px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tools img {
+  width: 50px;
+}
+
+footer {
+  background-color: #3c3b3b;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  font-family: "Roboto", sans-serif;
+  color: #f8f8fa;
+  font-size: 10px;
+  padding: 20px;
+  opacity: 60%;
+}
+@media only screen and (max-width: 850px) {
+  /* nav {
+    display: none;
+  } */
+  .container {
+    padding: 100px 100px 100px 100px;
+  }
+
+  .jumbotron {
+    background-position: center;
+  }
+
+  .jumbotron .container {
+    grid-template-areas: "box-1" "box-2";
+    grid-template-columns: 1fr;
+  }
+
+  .box-1 {
+    grid-area: box-2;
+    padding-top: 50px;
+    align-items: center;
+  }
+
+  .box-1 h1 {
+    text-align: center;
+  }
+
+  .box-1 p {
+    text-align: center;
+  }
+
+  .box-2 {
+    grid-area: box-1;
+    justify-content: center;
+  }
+
+  .about-me .container {
+    grid-template-areas: "box-3" "box-4";
+    grid-template-columns: 1fr;
+  }
+
+  .box-3 {
+    grid-area: box-3;
+    justify-content: center;
+  }
+
+  .box-3 picture img {
+    width: 353px;
+  }
+
+  .box-4 {
+    grid-area: box-4;
+    padding-top: 50px;
+    justify-content: center;
+  }
+
+  .hobby .box-card {
+    flex: 2;
+    justify-content: center;
+  }
+
+  .box-card .card {
+    margin: 10px;
+  }
+
+  .addres .container {
+    display: grid;
+    grid-template-areas: "box-5" "box-6";
+    grid-template-columns: 1fr;
+  }
+
+  .box-5 {
+    grid-area: box-5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-5 p {
+    text-align: center;
+  }
+
+  .box-6 {
+    grid-area: box-6;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+}
