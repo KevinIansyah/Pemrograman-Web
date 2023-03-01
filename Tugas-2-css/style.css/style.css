@@ -1,18 +1,47 @@
-body {
+h1 {
   font-family: "Kanit", sans-serif;
-  font-family: "Roboto", sans-serif;
+  font-size: 46px;
 }
 
+h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 30px;
+}
+
+a {
+  font-family: "Kanit", sans-serif;
+  font-size: 15px;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  padding: 100px 150px 100px 150px;
+}
+
+/* Navbar */
 nav {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  position: fixed;
+  z-index: 9999;
+}
+
+.container-nav {
+  width: 1240px;
   background-color: #242222;
+  border-radius: 20px;
   opacity: 80%;
   display: flex;
   justify-content: space-between;
   padding: 5px 7%;
   box-sizing: border-box;
-  position: fixed;
-  z-index: 9999;
 }
 
 nav .nav-logo img {
@@ -27,21 +56,15 @@ nav .nav-menu {
 nav .nav-menu a {
   margin-left: 30px;
   text-decoration: none;
-  font-family: "Kanit", sans-serif;
-  font-size: 15px;
   font-weight: lighter;
   color: #f8f8fa;
 }
 
 nav .nav-menu a:hover {
-  font-size: 15px;
   color: #8f8f9f;
 }
 
-.container {
-  padding: 100px 150px 100px 150px;
-}
-
+/* Jumbotron */
 .jumbotron {
   width: 100%;
   background-image: url(../image/Jumbotron.jpg);
@@ -88,13 +111,10 @@ nav .nav-menu a:hover {
 }
 
 .box-1 h2 {
-  font-family: "Kanit", sans-serif;
   color: #dda237;
-  font-size: 30px;
 }
 
 .box-1 h1 {
-  font-family: "Kanit", sans-serif;
   color: #f8f8fa;
   font-size: 58px;
   margin-top: 20px;
@@ -105,9 +125,7 @@ nav .nav-menu a:hover {
 }
 
 .box-1 p {
-  font-family: "Roboto", sans-serif;
   color: #f8f8fa;
-  font-size: 15px;
   margin-top: 20px;
   line-height: 20px;
 }
@@ -174,21 +192,15 @@ nav .nav-menu a:hover {
 }
 
 .box-4 h2 {
-  font-family: "Kanit", sans-serif;
   color: #dda237;
-  font-size: 30px;
 }
 
 .box-4 h1 {
-  font-family: "Kanit", sans-serif;
   color: #f8f8fa;
-  font-size: 46px;
 }
 
 .box-4 p {
-  font-family: "Roboto", sans-serif;
   color: #f8f8fa;
-  font-size: 15px;
   margin-top: 10px;
   line-height: 20px;
 }
@@ -202,7 +214,6 @@ nav .nav-menu a:hover {
   padding: 15px;
   margin-top: 20px;
   border-radius: 20px;
-  /* background-color: #121211; */
   border: 2px solid rgba(221, 162, 55, 0.8);
 }
 
@@ -220,9 +231,7 @@ nav .nav-menu a:hover {
 }
 
 .hobby h1 {
-  font-family: "Kanit", sans-serif;
   color: #f8f8fa;
-  font-size: 46px;
   text-align: center;
   padding-bottom: 70px;
 }
@@ -281,9 +290,7 @@ nav .nav-menu a:hover {
 }
 
 .box-5 h1 {
-  font-family: "Kanit", sans-serif;
   color: #dda237;
-  font-size: 46px;
 }
 
 .box-5 h1 span {
@@ -291,9 +298,7 @@ nav .nav-menu a:hover {
 }
 
 .box-5 p {
-  font-family: "Roboto", sans-serif;
   color: #f8f8fa;
-  font-size: 15px;
   margin-top: 10px;
   line-height: 20px;
 }
@@ -341,9 +346,7 @@ nav .nav-menu a:hover {
   background-color: #f8f8fa;
 }
 .contact h1 {
-  font-family: "Kanit", sans-serif;
   color: #242222;
-  font-size: 46px;
   text-align: center;
 }
 
@@ -429,9 +432,7 @@ nav .nav-menu a:hover {
 }
 
 .tools h1 {
-  font-family: "Kanit", sans-serif;
   color: #f8f8fa;
-  font-size: 46px;
   text-align: center;
 }
 
@@ -464,16 +465,17 @@ footer {
 }
 
 footer p {
-  font-family: "Roboto", sans-serif;
   color: #f8f8fa;
-  font-size: 10px;
+  font-size: 15px;
   padding: 20px;
   opacity: 60%;
 }
+
 @media only screen and (max-width: 850px) {
-  /* nav {
-    display: none;
-  } */
+  nav {
+    max-width: 850px;
+  }
+
   .container {
     padding: 100px 100px 100px 100px;
   }
@@ -558,4 +560,7 @@ footer p {
     display: flex;
     justify-content: center;
   }
+}
+
+@media only screen and (max-width: 450px) {
 }
