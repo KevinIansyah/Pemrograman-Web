@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.navbar {
+  background-image: linear-gradient(to right, #c9eeff, #97deff, #c9eeff);
+  padding: 10px 0;
+}
+
+.search {
+  margin-left: 20px;
+}
+
+.h2 {
+  margin-top: 80px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+table {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.scrollable {
+  overflow-x: scroll;
+  height: 480px;
+  margin-top: 20px;
+}
+
+th {
+  position: sticky;
+  top: 0;
+}
