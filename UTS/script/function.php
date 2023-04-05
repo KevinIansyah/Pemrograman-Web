@@ -249,13 +249,21 @@ function filterGajiDriver($data)
 // filter gaji kondektur
 function filterGajiKondektur($data)
 {
-    $bulan = $data['bulan'] + 1;
-    $query = "SELECT b.id_kondektur, b.nama, t.jumlah_km, t.tanggal, SUM(t.jumlah_km * 1500) AS gaji 
-              FROM kondektur b
-              JOIN trans_upn t ON b.id_kondektur = t.id_kondektur
-              WHERE t.tanggal LIKE '%2023-$bulan%'
-              GROUP BY b.id_kondektur, t.tanggal";
-    return $query;
+    if ($data["bulan"] == 0) {
+        return "SELECT b.id_kondektur, b.nama, t.tanggal, SUM(t.jumlah_km) AS jumlah_km, 
+                            SUM(t.jumlah_km * 3000) AS gaji
+                            FROM kondektur b
+                            JOIN trans_upn t ON b.id_kondektur = t.id_kondektur
+                            GROUP BY b.id_kondektur;";
+    } else {
+        $yearMonth = date('Y-m', strtotime('2023-' . sprintf('%02d', $data["bulan"]) . '-01'));
+        return "SELECT b.id_kondektur, b.nama, t.tanggal, SUM(t.jumlah_km) AS jumlah_km, 
+                            SUM(t.jumlah_km * 3000) AS gaji
+                            FROM kondektur b
+                            JOIN trans_upn t ON b.id_kondektur = t.id_kondektur
+                            WHERE t.tanggal LIKE '%{$yearMonth}%'
+                            GROUP BY b.id_kondektur, t.tanggal;";
+    }
 }
 
 // function jarakbus
